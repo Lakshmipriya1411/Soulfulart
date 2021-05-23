@@ -38,11 +38,13 @@
           setcookie("userid", $userid, time() + (86400 * 30));
          }
          else{
+          setcookie("userid","", time() - 3600);
           header("location: error.php");
           exit();
        }
        }      
       else{
+        setcookie("userid","", time() - 3600);
          header("location: error.php");
          exit();
       }
@@ -50,7 +52,8 @@
       $conn->close();
      
     }
-    else{      
+    else{    
+      setcookie("userid","", time() - 3600);  
       header("location: error.php");
       exit();
     }
