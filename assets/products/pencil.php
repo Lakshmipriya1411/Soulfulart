@@ -6,7 +6,17 @@
   setcookie("userid","", time() - 3600);
   header("location: error.php");
   exit();
-}
+  }
+  $sql="SELECT * from marketplace.userstatus where userid=$id and status='active';";
+  $res=$conn->query($sql);     
+  if($res->num_rows <= 0)
+  {
+    $user=$res->fetch_assoc();   
+    setcookie("userid","", time() - 3600);
+    header("location: ../../error.php");
+    exit();
+  }
+ $conn->close();
 ?>
 <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">

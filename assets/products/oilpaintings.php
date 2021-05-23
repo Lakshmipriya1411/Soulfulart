@@ -4,11 +4,20 @@ echo "wayslk;";
 if(isset($_COOKIE['userid']))
 $id=$_COOKIE['userid'];
 else{
-  echo "not here";
   setcookie("userid","", time() - 3600);
-  header("location: ../../error.php");
+  header("location: error.php");
   exit();
-}
+  }
+  $sql="SELECT * from marketplace.userstatus where userid=$id and status='active';";
+  $res=$conn->query($sql);     
+  if($res->num_rows <= 0)
+  {
+    $user=$res->fetch_assoc();   
+    setcookie("userid","", time() - 3600);
+    header("location: ../../error.php");
+    exit();
+  }
+ $conn->close();
 ?>
 
 

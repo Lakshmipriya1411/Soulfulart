@@ -1,5 +1,5 @@
 <?php require "products-header.php" ?>
-<?php require "assets/services/dbconnect.php"?>
+<?php require "../services/dbconnect.php"?>
 <?php
 if(isset($_COOKIE['userid']))
   $id=$_COOKIE['userid'];
