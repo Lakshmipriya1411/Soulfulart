@@ -2,6 +2,11 @@
 <?php
  if(isset($_COOKIE['userid']))
  $id=$_COOKIE['userid'];
+ else{
+  setcookie("userid","", time() - 3600);
+  header("location: error.php");
+  exit();
+}
  //echo $id;
 ?>
 <section id="portfolio" class="portfolio">

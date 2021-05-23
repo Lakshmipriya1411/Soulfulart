@@ -2,7 +2,7 @@
 <?php
     $id = $_REQUEST['id'];     
     $page= $_SERVER['HTTP_REFERER']; 
-    
+    $userid=$_COOKIE["userid"];
     $result = $conn->query("SELECT * FROM sys.products where id = ".$id.";");
     $prod = $result -> fetch_assoc();
     $hits = $prod["hits"] + 1;
@@ -21,7 +21,7 @@
     }
     else{
         $name=$prod['name'];
-        $conn->query("INSERT INTO marketplace.producthits VALUES($id,'soulfulart',$mhits,1,'$name','$page');");  
+        $conn->query("INSERT INTO marketplace.producthits VALUES($id,'soulfulart',$mhits,$userid,'$name','$page');");  
     }
    // $conn->close();
 ?>

@@ -4,7 +4,7 @@
 <?php
     if(isset($_REQUEST['id']))
     {
-      $id = $_REQUEST['id'];         
+      $id =htmlentities($_REQUEST['id']);         
       $sql="SELECT * from marketplace.encryptiondata where ciphertext='$id';";
       $res=$conn->query($sql);
       $sessionid="";

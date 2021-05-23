@@ -1,7 +1,12 @@
 <?php require "products-header.php" ?>
 <?php
 if(isset($_COOKIE['userid']))
-$id=$_COOKIE['userid'];
+  $id=$_COOKIE['userid'];
+else{
+  setcookie("userid","", time() - 3600);
+  header("location: error.php");
+  exit();
+}
 //$id =htmlentities( $_REQUEST['id']);
 ?>
 <section id="portfolio" class="portfolio">
