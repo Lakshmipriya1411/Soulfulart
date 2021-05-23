@@ -3,6 +3,7 @@
 if(isset($_COOKIE['userid']))
 $id=$_COOKIE['userid'];
 else{
+  echo "not here";
   setcookie("userid","", time() - 3600);
   header("location: error.php");
   exit();
