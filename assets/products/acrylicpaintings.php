@@ -1,4 +1,5 @@
 <?php require "products-header.php" ?>
+<?php require "assets/services/dbconnect.php"?>
 <?php
 if(isset($_COOKIE['userid']))
   $id=$_COOKIE['userid'];
@@ -6,7 +7,17 @@ else{
   setcookie("userid","", time() - 3600);
   header("location: error.php");
   exit();
-}
+  }
+  $sql="SELECT * from marketplace.userstatus where userid=$id and status='active';";
+  $res=$conn->query($sql);     
+  if($res->num_rows <= 0)
+  {
+    $user=$res->fetch_assoc();   
+    setcookie("userid","", time() - 3600);
+    header("location: ../../error.php");
+    exit();
+  }
+ $conn->close();
 //$id =htmlentities( $_REQUEST['id']);
 ?>
 <section id="portfolio" class="portfolio">
