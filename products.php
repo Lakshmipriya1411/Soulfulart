@@ -2,7 +2,7 @@
 <?php require "header.php" ?>
 <?php require "assets/services/marketdbconnector.php"?>
 <?php
-    if(isset($_REQUEST['id']))
+    if(isset($_REQUEST['id']) && basename($_SERVER['HTTP_REFERER'])=="markethomepage.php" )
     {
       $id =htmlentities($_REQUEST['id']);         
       $sql="SELECT * from marketplace.encryptiondata where ciphertext='$id';";
