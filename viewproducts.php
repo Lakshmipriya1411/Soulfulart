@@ -12,12 +12,12 @@
     $page = dirname($page).'/'."assets/products/".$prod['name'].'.php' ;
     echo $page;
     $conn->query("UPDATE products SET hits = ".$hits." WHERE id = ".$id.";");      
-     $res=$conn->query("SELECT * from marketplace.producthits where prodid=$id and type='soulfulart';");
+     $res=$conn->query("SELECT * from marketplace.producthits where prodid=$id  and type='soulfulart';");
     if($res->num_rows >0)
     {
         $mprod = $res -> fetch_assoc();    
         $mhits = $mprod["hits"] + 1;  
-        $conn->query("UPDATE marketplace.producthits SET hits = ".$mhits." WHERE prodid = ".$id." and type='soulfulart';");    
+        $conn->query("UPDATE marketplace.producthits SET hits = $mhits WHERE prodid = $id and type='soulfulart';");    
     }
     else{
         $name=$prod['name'];

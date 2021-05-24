@@ -56,7 +56,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                    <a  target="_blank"  href="http://myphpworld-env.eba-v47gj2kf.us-west-2.elasticbeanstalk.com//products.php?id='.urlencode($ciphertext).'" tabindex="-1">One stop portal for all types of creative paintings</a>';?>
+                                    <a  target="_blank"  href="http://myphpworld-env.eba-v47gj2kf.us-west-2.elasticbeanstalk.com/products.php?id='.urlencode($ciphertext).'" tabindex="-1">One stop portal for all types of creative paintings</a>';?>
                                        
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                    <a  target="_blank"  href="http://myphpworld-env.eba-v47gj2kf.us-west-2.elasticbeanstalk.com//products.php?id='.urlencode($ciphertext).'" tabindex="-1">One stop portal for all types of creative paintings</a>';?>
+                                    <a  target="_blank"  href="http://myphpworld-env.eba-v47gj2kf.us-west-2.elasticbeanstalk.com/products.php?id='.urlencode($ciphertext).'" tabindex="-1">One stop portal for all types of creative paintings</a>';?>
                                     </div>
                                 </div>
                             </div></div></div>
@@ -87,7 +87,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                        <a  target="_blank" href="http://lightmore.ml/Menu/Menu_list.html?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
+                                        <a  target="_blank" href="http://lightmore.ml/Menu/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                    <a target="_blank" href="http://lightmore.ml/Menu/Menu_list.html?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
+                                    <a target="_blank" href="http://lightmore.ml/Menu/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
                                     </div>
                                 </div>
                             </div></div></div>

@@ -21,7 +21,7 @@ if(empty($_SESSION["uname"]))
 
  if($sqlprodhitsres->num_rows>0)
  {
-    $rows=$sqlprodhitsres->num_rows;  
+    $rows=$sqlprodhitsres->num_rows; 
      for($i=0; $i<$rows; $i++){
      {
         //echo "yes";

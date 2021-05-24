@@ -90,7 +90,7 @@ $(function(){
         
     }
     // echo "SELECT * FROM marketplace.products where productname = '$productname' and userid=$userid and id=$prodid;";
-    $marketresult = $conn->query("SELECT * FROM marketplace.products where productname = '$productname' and userid=$userid and id=$prodid;");
+    $marketresult = $conn->query("SELECT * FROM marketplace.products where productname = '$productname' and userid=$userid and prodid=$prodid;");
        
     if ($marketresult->num_rows > 0) {
         $marketprod=$marketresult -> fetch_assoc();
@@ -119,12 +119,12 @@ $(function(){
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
       }
-      // if ($marketresult->num_rows > 0) {
-      //   $sql="UPDATE marketplace.products set review='$review',hits=$hits,rating=$rating  where id=$prodid and userid=$userid and productname='$productname'; ";
-      // }else{
-       // echo "again why";
+      if ($marketresult->num_rows > 0) {
+        $sql="UPDATE marketplace.products set review='$review',hits=$hits,rating=$rating  where prodid=$prodid and userid=$userid and productname='$productname'; ";
+      }else{
+       echo "again why";
         $sql = "INSERT INTO marketplace.products(prodid,type,rating,review,userid,productname,hits) VALUES($prodid,'soulfulart',$rating,'$review',$userid,'$productname',$hits)";
-      //}
+      }
       //$result = $conn->query($sql);
       if ($conn->query($sql) === TRUE) {
        // echo "New record created successfully";

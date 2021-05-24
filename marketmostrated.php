@@ -19,7 +19,7 @@ if(empty($_SESSION["uname"]))
 <?php
  if($sqlproductsres->num_rows>0)
  {
-    $rows=$sqlproductsres->num_rows;  
+    $rows=$sqlproductsres->num_rows; 
      for($i=0; $i<$rows; $i++){
      {
 

@@ -19,7 +19,7 @@ if(empty($_SESSION["uname"]))
 <?php
  if($sqlureviewsres->num_rows>0)
  {
-    $rows=$sqlureviewsres->num_rows;  
+    $rows=$sqlureviewsres->num_rows; 
      for($i=0; $i<$rows; $i++){
      {
 
