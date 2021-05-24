@@ -90,3 +90,5 @@
 
     </div>
   </header><!-- End Header -->
+
+<?php require "../services/marketdbconnector.php"?>
