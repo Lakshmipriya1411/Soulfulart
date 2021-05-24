@@ -1,7 +1,7 @@
 <?php require "products-header.php" ?>
 
 <?php
-echo "wayslk;";
+
 if(isset($_COOKIE['userid']))
 $id=$_COOKIE['userid'];
 else{

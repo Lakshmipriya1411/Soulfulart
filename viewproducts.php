@@ -7,21 +7,24 @@
     $prod = $result -> fetch_assoc();
     $hits = $prod["hits"] + 1;
     $mhits=1;
-    echo "base";
-    echo basename($page);
+    //echo "base";
+    //echo basename($page);
     $page = dirname($page).'/'."assets/products/".$prod['name'].'.php' ;
-    echo $page;
-    $conn->query("UPDATE products SET hits = ".$hits." WHERE id = ".$id.";");      
-     $res=$conn->query("SELECT * from marketplace.producthits where prodid=$id  and type='soulfulart';");
+    //echo $page;
+    $conn->query("UPDATE products SET hits = ".$hits." WHERE id = ".$id.";");   
+    //echo "SELECT * from marketplace.producthits where prodid=$id and userid=$userid  and type='soulfulart';";   
+     $res=$conn->query("SELECT * from marketplace.producthits where prodid=$id and userid=$userid  and type='soulfulart';");
     if($res->num_rows >0)
     {
+       // echo "here";
         $mprod = $res -> fetch_assoc();    
         $mhits = $mprod["hits"] + 1;  
         $conn->query("UPDATE marketplace.producthits SET hits = $mhits WHERE prodid = $id and type='soulfulart';");    
     }
     else{
+        //echo "or";
         $name=$prod['name'];
-        $conn->query("INSERT INTO marketplace.producthits VALUES($id,'soulfulart',$mhits,$userid,'$name','$page');");  
+        $conn->query("INSERT INTO marketplace.producthits(prodid,type,hits,userid,productname,prodlink) VALUES($id,'soulfulart',$mhits,$userid,'$name','$page');");  
     }
    // $conn->close();
 ?>
