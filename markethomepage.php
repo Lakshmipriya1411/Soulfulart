@@ -149,7 +149,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                    <a  target="_blank"  href="http://shilpisoni.website/main_menu.phpp?id='.urlencode($ciphertext).'" tabindex="-1">Check out all the sports products </a>';?>
+                                    <a  target="_blank"  href="http://shilpisoni.website/products.phpp?id='.urlencode($ciphertext).'" tabindex="-1">Check out all the sports products </a>';?>
                                        
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                    <a  target="_blank"  href="http://shilpisoni.website/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Check out all the sports products</a>';?>
+                                    <a  target="_blank"  href="http://shilpisoni.website/products.php?id='.urlencode($ciphertext).'" tabindex="-1">Check out all the sports products</a>';?>
                                     </div>
                                 </div>
                             </div></div></div>
