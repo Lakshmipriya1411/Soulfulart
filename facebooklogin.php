@@ -15,6 +15,8 @@ $cphone="7656457674";
 $uname="lakshmi";
 $passwd="abc123";
 
+
+
 if ($uname != '' && $passwd != '') {
     $passwd = password_hash($passwd, PASSWORD_DEFAULT);               
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -31,14 +33,14 @@ if ($uname != '' && $passwd != '') {
         echo  $res["username"];
         echo $res["id"];
         $_SESSION["uname"] = $res["username"];
-        $_SESSION["uid"] = $res["id"];     
-        header("location: markethomepage.php");
-        exit();    
+        $_SESSION["uid"] = $res["id"];   
+        require "fbuserstatus.php";  
+        // header("location: markethomepage.php");
+        // exit();    
         //user exists
        // $submiterr="Username already exists!";
     }              
-    if($submiterr=="")
-    {                  
+                     
         //echo  $guid;
         $sql = "INSERT INTO marketplace.user(first_name, last_name, email, address, home_phone, cell_phone, username, password) VALUES  ('$fname', '$lname', '$emailId', '$address', '$hphone', '$cphone', '$uname', '$passwd')";
 
@@ -52,14 +54,15 @@ if ($uname != '' && $passwd != '') {
                 $userid=$user["id"];
                 $_SESSION["uname"] = $uname;
                 $_SESSION["uid"] = $userid;
+                require "fbuserstatus.php";
                  //echo "New record created successfully";
-                header("location: markethomepage.php");
-                exit();                          
+                // header("location: markethomepage.php");
+                // exit();                          
             }
          } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
-    }
+    
     $conn->close();
 }
 
