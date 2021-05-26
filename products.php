@@ -10,31 +10,24 @@
       $sessionid="";
       if($res->num_rows > 0)
        {    
-        $sres=$res->fetch_assoc();  
-        //echo $sres['tag'];       
+        $sres=$res->fetch_assoc();        
         $tag =hex2bin($sres['tag']); 
         $iv = hex2bin($sres['iv']);      
         $key="market";
-        $ciphertext="";
-        //echo $tag;
-        //echo $iv;
-        $cipher = "aes-128-gcm";
-       // $tags="";
+        $ciphertext="";       
+        $cipher = "aes-128-gcm";    
         if (in_array($cipher, openssl_get_cipher_methods()))
         {
             $ciphertext = $id;          
             $original_plaintext = openssl_decrypt($id, $cipher, $key, $options=0, $iv,$tag);
-            $sessionid=$original_plaintext;
-           // echo $original_plaintext;//got the session id , now g et the user id with session id
-            //echo $userid;
+            $sessionid=$original_plaintext;         
         }
         $sqlu="SELECT * from marketplace.userstatus where sessionid='$sessionid' and status='active';";
         $resu=$conn->query($sqlu);
         if($resu->num_rows > 0)
          {    
           $sresu=$resu->fetch_assoc();       
-          $userid=$sresu["userid"];
-          echo $userid;
+          $userid=$sresu["userid"];      
           setcookie("userid", $userid, time() + (86400 * 30));
          }
          else{

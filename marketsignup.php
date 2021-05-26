@@ -92,7 +92,7 @@ include('facebook-login/facebook-login-setup.php');
                 }              
                 if($submiterr=="")
                 {                  
-                    echo  $guid;
+                    //echo  $guid;
                     $sql = "INSERT INTO marketplace.user(first_name, last_name, email, address, home_phone, cell_phone, username, password) VALUES  ('$fname', '$lname', '$emailId', '$address', '$hphone', '$cphone', '$uname', '$passwd')";
 
                     if ($conn->query($sql) === TRUE) {

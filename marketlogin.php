@@ -32,8 +32,8 @@ include('facebook-login/facebook-login-setup.php');
                 if ($conn->connect_error) {
                       die("Connection failed: " . $conn->connect_error);
                 }
-                echo $uname;
-                echo $passwd;
+                //echo $uname;
+                //echo $passwd;
                 $sql = "SELECT username,first_name, password,id FROM marketplace.user WHERE username = '$uname'";
                 $result = $conn->query($sql);
                 $ur=$result->fetch_assoc();     
@@ -41,11 +41,11 @@ include('facebook-login/facebook-login-setup.php');
                       $msg = "found";                      
                           //date_default_timezone_set('Asia/Kolkata');
                           //$date = date('d-m-y h:i:s');
-                          echo "whats";
+                          //echo "whats";
                           $userid=$ur["id"];
                           //echo $userid;
                           $guid=createGUID();
-                          echo $guid;
+                          //echo $guid;
                           $sqlusstatus="SELECT * FROM marketplace.userstatus where userid=$userid;";
                           $sqluserstatusres=$conn->query($sqlusstatus);  
                           // print_r($res);     
@@ -61,7 +61,7 @@ include('facebook-login/facebook-login-setup.php');
                             $sqlustatus = "INSERT INTO marketplace.userstatus VALUES  ($userid,'$uname','$date','$date','active','$guid')";
                             
                           }
-                          echo "wats this";
+                          //echo "wats this";
                           $sres=$conn->query($sqlustatus);
                           print_r($sres);                         
                           $_SESSION["uname"] = $uname;
