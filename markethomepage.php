@@ -142,7 +142,32 @@ if ($sqluserres->num_rows >0)
 
 
                     <div class="col-md-6 tn-right">
-                        <!-- Shilpi's website here -->
+                    <div class="row tn-slider slick-initialized slick-slider">
+                            <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 2850px; transform: translate3d(-570px, 0px, 0px);"><div class="col-md-6 slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 570px;">
+                                <div class="tn-img">
+                                    <img width="540" height="302" src="assets/img/back-school.jpg">
+                                    <div class="tn-title">
+                                    <?php
+                                    echo '
+                                    <a  target="_blank"  href="http://shilpisoni.website/main_menu.phpp?id='.urlencode($ciphertext).'" tabindex="-1">Check out all the sports products </a>';?>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                         
+                            <div class="col-md-6 slick-slide slick-cloned" data-slick-index="3" aria-hidden="true" tabindex="-1" style="width: 570px;">
+                                <div class="tn-img">
+                                    <img width="540" height="302" src="assets/img/back-school.jpg">
+                                    <div class="tn-title">
+                                    <?php
+                                    echo '
+                                    <a  target="_blank"  href="http://shilpisoni.website/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Check out all the sports products</a>';?>
+                                    </div>
+                                </div>
+                            </div></div></div>
+                            
+                        <!-- <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button> -->
+                        </div>
                     </div>
                     
                 </div>
