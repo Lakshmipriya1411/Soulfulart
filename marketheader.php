@@ -72,7 +72,7 @@ if(!session_id()){
 						<?php if(!empty($_SESSION["uname"])) 
 							echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="marketlogout.php">Logout</a></li>';
 						?>
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#"> <?php if(!empty($_SESSION["uname"])){ echo "Welcome ". $_SESSION["uname"]."!";} else{echo "";} ?></a></li>
+							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#"> <?php if(!empty($_SESSION["uname"]) && $_SESSION["uname"]!="lakshmi"  ){ echo "Welcome ". $_SESSION["uname"]."!";}elseif($_SESSION["uname"]=="lakshmi"){echo "Welcome !";} else{echo "";} ?></a></li>
                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#users">Users</a></li> -->
                     </ul>
                 </div>
