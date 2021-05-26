@@ -88,7 +88,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                        <a  target="_blank" href="http://lightmore.ml/Menu/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
+                                        <a  target="_blank" href="http://lightmore.ml/Menu/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Satisfy your food cravings here</a>';?>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                    <a target="_blank" href="http://lightmore.ml/Menu/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
+                                    <a target="_blank" href="http://lightmore.ml/Menu/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Satisfy your food cravings here</a>';?>
                                     </div>
                                 </div>
                             </div></div></div>
