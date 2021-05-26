@@ -57,7 +57,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                    <a  target="_blank"  href="http://myphpworld-env.eba-v47gj2kf.us-west-2.elasticbeanstalk.com//products.php?id='.urlencode($ciphertext).'" tabindex="-1">One stop portal for all types of creative paintings</a>';?>
+                                    <a  target="_blank"  href="http://localhost/soulfulart/products.php?id='.urlencode($ciphertext).'" tabindex="-1">One stop portal for all types of creative paintings</a>';?>
                                        
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                    <a  target="_blank"  href="http://myphpworld-env.eba-v47gj2kf.us-west-2.elasticbeanstalk.com//products.php?id='.urlencode($ciphertext).'" tabindex="-1">One stop portal for all types of creative paintings</a>';?>
+                                    <a  target="_blank"  href="http://localhost/soulfulart/products.php?id='.urlencode($ciphertext).'" tabindex="-1">One stop portal for all types of creative paintings</a>';?>
                                     </div>
                                 </div>
                             </div></div></div>
@@ -88,7 +88,7 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                        <a  target="_blank" href="http://lightmore.ml/Menu/Menu_list.html?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
+                                        <a  target="_blank" href="http://lightmore.ml/Menu/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
                                     </div>
                                 </div>
                             </div>
@@ -100,13 +100,49 @@ if ($sqluserres->num_rows >0)
                                     <div class="tn-title">
                                     <?php
                                     echo '
-                                    <a target="_blank" href="http://lightmore.ml/Menu/Menu_list.html?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
+                                    <a target="_blank" href="http://lightmore.ml/Menu/main_menu.php?id='.urlencode($ciphertext).'" tabindex="-1">Find all the food related things here</a>';?>
                                     </div>
                                 </div>
                             </div></div></div>
                             
                         <!-- <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button> -->
                         </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-6 tn-left">
+                        <div class="row tn-slider slick-initialized slick-slider">
+                            <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 2850px; transform: translate3d(-570px, 0px, 0px);"><div class="col-md-6 slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 570px;">
+                                <div class="tn-img">
+                                    <img width="540" height="302" src="assets/img/constructionbanner.jpg">
+                                    <div class="tn-title">
+                                    <?php
+                                    echo '
+                                    <a  target="_blank"  href="http://angmaterials.com/Products.php?id='.urlencode($ciphertext).'" tabindex="-1">Empower your construction projects</a>';?>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                         
+                            <div class="col-md-6 slick-slide slick-cloned" data-slick-index="3" aria-hidden="true" tabindex="-1" style="width: 570px;">
+                                <div class="tn-img">
+                                    <img width="540" height="302" src="assets/img/constructionbanner.jpg">
+                                    <div class="tn-title">
+                                    <?php
+                                    echo '
+                                    <a  target="_blank"  href="http://angmaterials.com/Products.php?id='.urlencode($ciphertext).'" tabindex="-1">Empower your construction projects</a>';?>
+                                    </div>
+                                </div>
+                            </div></div></div>
+                            
+                        <!-- <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button> -->
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 tn-right">
+                        <!-- Shilpi's website here -->
                     </div>
                     
                 </div>
@@ -126,7 +162,7 @@ if ($sqluserres->num_rows >0)
                 <ul class="list list-inline">        
 <?php
 
-$sqlpreviousvisits="select * from producthits where userid=".$uid.";";
+$sqlpreviousvisits="select * from producthits where userid=".$uid." ORDER BY ts DESC;";
 $sqlprevvisres=$conn->query($sqlpreviousvisits);
 if($sqlprevvisres->num_rows>0)
 {

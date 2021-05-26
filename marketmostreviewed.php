@@ -98,9 +98,9 @@ if($sqltypesres->num_rows>0)
         <!-- Accordion item 1 -->
         <div class="card">
           <div id="heading'.$ix.'" class="card-header bg-white shadow-sm border-0">
-            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapse'.$ix.'" aria-expanded="true" aria-controls="collapseOne" class="d-block position-relative text-dark text-uppercase collapsible-link py-2">Top rated products of '.$typename.'</a></h6>
+            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapse'.$ix.'" aria-expanded="false" aria-controls="collapseOne" class="d-block position-relative text-dark text-uppercase collapsible-link py-2">Top 5 reviewed products of '.$typename.'</a></h6>
           </div>
-          <div id="collapse'.$ix.'" aria-labelledby="heading'.$ix.'" data-parent="#accordionExample" class="collapse show">
+          <div id="collapse'.$ix.'" aria-labelledby="heading'.$ix.'" data-parent="#accordionExample" class="collapse">
             <div class="card-body p-5">';
             $sqlprvwindi="select *,count(review) as reviewcount from products where type='$typename' group by productname,type order by count(review) desc limit 5";
             $sqlprodrvwres=  $conn->query($sqlprvwindi);
